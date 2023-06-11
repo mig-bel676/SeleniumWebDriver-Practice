@@ -11,9 +11,9 @@ chromeDriverPath = "/Users/mig/Development/chromedriver_mac_arm64/chromedriver"
 # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 driver = webdriver.Chrome(executable_path=chromeDriverPath)
 
-driver.get("https://www.python.org/")
-input_text = driver.find_element(By.XPATH, '//*[@id="site-map"]/div[2]/div/ul/li[2]/a')
-print(input_text.text)
+driver.get("https://www.amazon.com")
+# input_text = driver.find_element(By.XPATH, '//*[@id="site-map"]/div[2]/div/ul/li[2]/a')
+# print(input_text.text)
 
 
-driver.quit()
+# driver.quit()
