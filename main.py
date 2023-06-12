@@ -16,9 +16,11 @@ chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 driver.get("https://www.python.org")
 
-searchbar = driver.find_element(By.NAME, "q")
+times = driver.find_elements(By.CSS_SELECTOR, '.event-widget .menu li time')
+names = driver.find_elements(By.CSS_SELECTOR, '.event-widget .menu li a')
 
-print(searchbar.siz)
+UpcomingEvents = {num: {'time':  times[num].text, 'name': names[num].text} for num in range(len(times))}
 
+print(UpcomingEvents)
 
 
